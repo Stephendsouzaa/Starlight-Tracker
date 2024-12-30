@@ -1,0 +1,50 @@
+{
+  "name": "starlight-tracker-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Starlight Tracker",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "author": "Stephen D Souza",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@react-spring/web": "^9.7.5",
+    "axios": "^1.7.9",
+    "firebase": "^11.0.2",
+    "framer-motion": "^11.13.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0",
+    "react-scripts": "^3.0.1",
+    "react-simple-typewriter": "^5.0.1",
+    "react-typed": "^2.0.12",
+    "resolve-url-loader": "^5.0.0",
+    "svgo": "^3.3.2",
+    "xlsx": "^0.18.5"
+  },
+  "keywords": [],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  },
+  "resolutions": {
+    "nth-check": "^2.0.1",
+    "postcss": "^8.4.31"
+  }
+}

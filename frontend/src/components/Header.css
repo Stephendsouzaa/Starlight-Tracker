@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000000; /* Dark background for the body */
+    color: #ffffff; /* Text color */
+}
+
+.header {
+    background: ; /* White background for the header */
+    padding: 17px;    
+    color: yellow;
+    text-align: center;
+    box-shadow: 0 4px 10px rgb(248, 32, 32); /* Dark shadow for depth */
+    position: relative; /* Positioning for animation */
+    overflow: hidden; /* Ensure no overflow */
+    border: 3px solid #ffffff; /* Dark border around the header */
+    border-radius: 9px; /* Rounded corners */
+    margin: 20px; /* Space from the edges */
+}
+
+.header-title {
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 1px; /* Slightly spaced letters */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+    animation: slideIn 1s ease-out; /* Slide in effect */
+}
+
+/* Animation for header title */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px); /* Start from above */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+        opacity: 1; /* End visible */
+    }
+}
+
+.scroll-container {
+    max-height: 300px; /* Set a max height for the scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 20px; /* Space above the buttons */
+    padding: 10px; /* Optional: Padding around the scrollable area */
+}
+
+.nav {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-start; /* Align buttons to the left */
+    width: 100%; 
+    margin-top: 157px;/* Ensure it takes full width */
+}
+
+.nav-link {
+    color: yellow; /* Text color */
+    text-decoration: none;
+    margin: 5px 0; /* Space between buttons */
+    font-size: 1.2em;
+    padding: 10px 15px; /* Padding for better click area */
+    border: 2px solid white; /* White border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: transparent; /* Make background transparent */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.nav-link:hover {
+    color: #1a1a2e; /* Dark text color on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2em; /* Smaller title on mobile */
+    }
+    
+    .nav-link {
+        font-size: 1em; /* Smaller font size on mobile */
+        margin: 5px 0; /* Reduce margin on mobile */
+    }
+}

@@ -1,0 +1,52 @@
+.home {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.typing-effect {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+h4 {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.upload-btn, .feedback-btn, .profile-btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.upload-btn:hover, .feedback-btn:hover, .profile-btn:hover {
+    background-color: #0056b3;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid hsl(0, 0%, 100%);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}

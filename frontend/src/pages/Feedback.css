@@ -1,0 +1,309 @@
+/* Feedback Form Styles */
+.feedback-container {
+    background: linear-gradient(90deg, #ff0000, #003cff);
+    color: #000000;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+    font-size: 2em;
+    color: yellow;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text {
+    font-size: 1.1em;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 25px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .feedback-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-field {
+    width: 90%;
+    padding: 12px 15px;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #0400ff;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .input-field:focus {
+    border-color: #ff0026;
+    outline: none;
+  }
+  
+  .select-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #3a3a60;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .select-group select:focus {
+    border-color: #ffb6c1;
+    outline: none;
+  }
+  
+  .feedback-textarea {
+    width: 90%;
+    padding: 15px;
+    border: 2px solid #3a3a60;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #ff0000;
+    font-size: 1em;
+    min-height: 100px;
+    resize: vertical;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .feedback-textarea:focus {
+    border-color: #ffb6c1;
+    outline: none;
+  }
+  
+  .char-count {
+    font-size: 0.9em;
+    color: #000000;
+    margin-top: 5px;
+    text-align: right;
+  }
+  
+  .progress-bar {
+    height: 5px;
+    background: linear-gradient(90deg, #ffb6c1, #ff7b8c);
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .rating-group {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  /* General styles for the rating and survey sections */
+.feedback-form .rating-section,
+.feedback-form .survey-section {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f9f9f9, #e6e6e6);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.feedback-form .rating-section:hover,
+.feedback-form .survey-section:hover {
+  transform: translateY(-5px);
+  background-color: #f4f4f8;
+}
+
+/* Styles for the rating */
+.rating-stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.rating-stars button {
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: #ffd700;
+  cursor: pointer;
+  margin: 0 0.2rem;
+  transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+.rating-stars button:hover {
+  color: #ffc107;
+  transform: scale(1.2);
+}
+
+.rating-stars button.active {
+  color: #ff9800;
+}
+
+/* Styles for the survey question */
+.survey-section {
+  text-align: center;
+}
+
+.survey-section .survey-options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
+.survey-section .survey-options button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: 2px solid #6c63ff;
+  background: #fff;
+  color: #6c63ff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.survey-section .survey-options button:hover {
+  background: #6c63ff;
+  color: #fff;
+}
+
+.survey-section .survey-options button.active {
+  background: #3f3dff;
+  color: #fff;
+  border-color: #3f3dff;
+}
+
+/* Animation for form interaction */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feedback-form .rating-section,
+.feedback-form .survey-section {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+  .star {
+    font-size: 1.5em;
+    color: #bbb;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .star.filled {
+    color: #ffb6c1;
+  }
+  
+  .submit-btn {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #b700ff, #ff0000);
+    color: #ffffff;
+    border: none;
+    top:700px;
+    right:370px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  .submit-btn:disabled {
+    background: #444;
+    cursor: not-allowed;
+  }
+  
+  .submit-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #fd0026, #fffb00);
+  }
+  
+  .success-message {
+    text-align: center;
+    color: yellow;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .error-message {
+    text-align: center;
+    color: #f29b42;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Animation for fadeIn */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Hover effects */
+  .input-field:hover,
+  .feedback-textarea:hover,
+  .select-group select:hover {
+    border-color: #ff7b8c;
+  }
+  
+  /* For responsiveness */
+  @media (max-width: 768px) {
+    .feedback-container {
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: 1.8em;
+    }
+  
+    .feedback-form {
+      flex-direction: column;
+    }
+  
+    .input-group {
+      margin-bottom: 12px;
+    }
+  }
+  .scrollable-form {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .scrollable-form::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .scrollable-form::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  .scrollable-form::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  /* Rest of the styles from the original Feedback.css */
+  

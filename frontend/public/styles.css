@@ -1,0 +1,348 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Body styling */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent default scrolling */
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+}
+/* Body Styling - Keep this as is */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Light background color */
+    color: #333; /* Dark text color for readability */
+}
+
+/* Root Container Styling - Add scroll specifically here */
+#root {
+    min-height: 100vh; /* Ensures root takes full viewport height */
+    padding: 20px;
+    overflow-y: auto; /* Enables vertical scrolling only inside #root */
+    max-height: 100vh; /* Ensures it doesn't grow beyond the viewport height */
+}
+
+/* Custom Scrollbar for #root */
+#root::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
+
+#root::-webkit-scrollbar-track {
+    background: #ccc; /* Light grey background for the scrollbar track */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#root::-webkit-scrollbar-thumb {
+    background: #888; /* Default color for the thumb */
+    border-radius: 10px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* On hover, change thumb color */
+#root::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker thumb color on hover */
+}
+
+/* Scrollable container */
+#main-container {
+    scroll-snap-type: y mandatory; /* Enable vertical snapping */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    height: 100vh;
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+/* Sections inside the container */
+.section {
+    height: 100vh; /* Full-screen height for each section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    scroll-snap-align: start; /* Snap alignment for each section */
+    transition: background 0.5s ease-in-out; /* Smooth background transitions */
+}
+
+/* Different section backgrounds */
+.section:nth-child(1) {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+}
+
+.section:nth-child(2) {
+    background: linear-gradient(135deg, #5d9fff, #5486ff);
+}
+
+.section:nth-child(3) {
+    background: linear-gradient(135deg, #fddb3a, #ff9e00);
+}
+
+.section:nth-child(4) {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+
+/* Navigation Bar */
+nav {
+    background-color: ;
+    padding: 15px 0;
+    position: fixed; /* Fixed position for consistent visibility */
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    margin-top: 0px; /* This creates space above the div */
+    
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #44aaff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+/* Main Content */
+#root {
+    position: relative;
+    z-index: 10; /* Ensure content is above the 3D background */
+    padding-top: 0px; /* Space for the nav bar */
+    margin-top: 0px; /* This creates space above the div */
+    
+}
+
+h1 {
+    font-size: 3em;
+    margin: 20px 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+p {
+    font-size: 1.5em;
+    margin: 10px 0;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Navigation Links Below Header */
+nav + p {
+    margin: 10px 0 30px; /* Extra space below the paragraph */
+}
+
+/* Chatbot Logo */
+#chatbot-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 177px;
+    height: 97px;
+    cursor: pointer;
+    z-index: 99;
+    transition: transform 0.3s;
+}
+
+#chatbot-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Chatbot Modal */
+#chat-modal {
+    display: none;
+    position: fixed;
+    bottom: 100px; /* Adjusts the position above the logo */
+    right: 20px;
+    width: 300px;
+    background: rgba(50, 50, 50, 0.9); /* Darker background for better visibility */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+#chat-box {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    justify-content: space-between;
+}
+
+#close-btn {
+    align-self: flex-end;
+    font-size: 1.5em;
+    color: #f44336;
+}
+
+#messages {
+    height: 250px;
+    overflow-y: auto;
+    padding-right: 5px;
+    margin-bottom: 10px;
+}
+
+#messages div {
+    text-align: left;
+    margin: 5px 0;
+}
+
+#user-input {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #fbff00;
+    color: #000000;
+}
+
+#send-btn {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #44aaff;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#send-btn:hover {
+    background-color: #3377bb;
+}
+
+/* Scrollbar Styling */
+#messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+#messages::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+#messages::-webkit-scrollbar-track {
+    background: #222;
+}
+
+/* Additional Styling for Animation Canvas */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure it's behind the content */
+}
+
+/* Footer or additional content styles (if needed) */
+footer {
+    position: relative;
+    padding: 20px;
+    background: rgba(30, 30, 30, 0.9);
+    color: #fff;
+    text-align: center;
+    z-index: 10;
+}
+button {
+    padding: 11px 20px;               /* Padding around the text */
+    font-size: 16px;                  /* Font size of the button text */
+    cursor: pointer;                  /* Change cursor to pointer on hover */
+    border: 3px solid #ffffff;        /* Dark border around the button */
+    border-radius: 9px;               /* Rounded corners */
+    background-color: rgb(0, 0, 0); /* Background color (example) */
+    color: rgb(251, 255, 0);          /* Text color */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    
+    /* Positioning for bottom-right corner */
+    position: fixed;                  /* Fixes the button to the screen */
+    top: 307px;                       /* Distance from the bottom */
+    right: 50px;                      /* Distance from the right */
+    
+    /* Optional: Add shadow for depth */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    text-align: center;               /* Center align text */
+    overflow: hidden;                 /* Ensure no overflow */
+}
+
+/* Example hover effect to change the background color */
+button:hover {
+    background-color: ; /* Darker background on hover */
+}
+
+/* Optional hover effect */
+button:hover {
+    background-color: #0056b3;        /* Darker shade on hover */
+}
+
+#chat-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 100px; /* Position from the bottom of the screen */
+    right: 20px; /* Position from the right of the screen */
+    width: 300px; /* Set a width for the modal */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Optional padding inside the modal */
+    border-radius: 8px; /* Optional border radius for rounded corners */
+}
+
+#chat-box {
+    background-color: rgb(15, 0, 148);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    max-width: 80%; /* Responsive width */
+}
+
+#messages {
+    max-height: 200px; /* Limit height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-bottom: 10px; /* Space between messages and input */
+    padding: 10px;
+    border: 1px solid #ffffff; /* Optional border for clarity */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Optional styling for user input and send button */
+#user-input {
+    width: calc(100% - 22px); /* Adjust for padding */
+    padding: 10px;
+    border: 1px solid #f50404;
+    border-radius: 5px;
+}
+
+#send-btn {
+    padding: 10px;
+    margin-top: 305px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
