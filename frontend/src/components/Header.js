@@ -96,9 +96,14 @@ function Header() {
             <>
               <Link className="nav-link" to="/star-info" onClick={(e) => { handleAccess(e); handleButtonClick(); }}>Star Info</Link>
               <Link className="nav-link" to="/constellation-info" onClick={(e) => { handleAccess(e); handleButtonClick(); }}>Constellation Info</Link>
-              <a href="http://localhost:7000" target="_blank" rel="noopener noreferrer" className="nav-link upload-link" onClick={(e) => { handleAccess(e); handleButtonClick(); }}>
-                Upload / Capture
-              </a>
+              <a href="https://starlighttracker-uplaod-capture.onrender.com/" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   className="nav-link upload-link" 
+   onClick={(e) => { handleAccess(e); handleButtonClick(); }}>
+   Upload / Capture
+</a>
+
               <Link className="nav-link" to="/space-news" onClick={(e) => { handleAccess(e); handleButtonClick(); }}>Latest Space News</Link>
               <a href="/feedback" target="_blank" rel="noopener noreferrer" className="nav-link" onClick={(e) => { handleAccess(e); handleButtonClick(); }}>Feedback</a>
               <Link className="nav-link" to="/planetary-info" onClick={(e) => { handleAccess(e); handleButtonClick(); }}>Planetary Info</Link>
